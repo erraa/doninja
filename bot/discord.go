@@ -65,9 +65,8 @@ func imageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	pathSlice := strings.Split(u.Path, ".")
 	pathEnding := pathSlice[len(pathSlice)-1]
-	log.Info(pathEnding)
 	if pathEnding == "jpg" || pathEnding == "png" {
-		log.Info(pathEnding)
+		log.Info(u.String)
 	}
 
 	file, err := download(u, pathEnding)
